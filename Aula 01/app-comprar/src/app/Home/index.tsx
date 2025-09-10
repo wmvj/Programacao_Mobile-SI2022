@@ -1,9 +1,10 @@
 import { Text, View, Image, TouchableOpacity } from "react-native"
-
 import { styles } from "./styles"
+
 import { Button } from "@/components/Button"
 import { Input } from "@/components/Input"
 import { Filter } from "@/components/Filter"
+
 import { FilterStatus } from "@/types/FilterStatus"
 
 const FILTER_STATUS: FilterStatus[] = [FilterStatus.PENDING, FilterStatus.DONE]

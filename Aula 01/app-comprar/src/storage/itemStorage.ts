@@ -30,3 +30,25 @@ async function save(items: ItemsStorage[]): Promise<void>{
       throw new Error("Deu problema para salvar os dados")  
     }
 }
+
+async function add(newItem: ItemsStorage): Promise<ItemsStorage[]> {
+    const items = await get()
+    const updateItems = [...items, newItem]
+    await save(updateItems)
+
+    return updateItems
+}
+
+async function remove(id:string): Promise<void> {
+    const items = await get()
+    const updateItems = items.filter((item)=>{item.id !== id})
+    await save(updateItems)
+}
+
+export const itemStorage = {
+    get,
+    getByStatus,
+    save,
+    add,
+    remove
+}

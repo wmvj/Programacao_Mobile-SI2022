@@ -1,4 +1,6 @@
 import { Text, View, Image, TouchableOpacity, FlatList } from "react-native"
+import { useState, useEffect } from "react"
+// import {itemStorage, ItemsStorage} from "@/storage/itemStorage"
 
 import { styles } from "./styles"
 import { FilterStatus } from "@/types/FilterStatus"
@@ -62,7 +64,7 @@ export function Home() {
               onRemove={() => console.log("remover")}
             />
           )}
-          showsVerticalScrollIndicator={false}
+          showsVerticalScrollIndicator={true}
           ItemSeparatorComponent={() => <View style={styles.separator} />}
           contentContainerStyle={styles.listContent}
           ListEmptyComponent={() => <Text style={styles.empty}>Nenhum item aqui.</Text>}

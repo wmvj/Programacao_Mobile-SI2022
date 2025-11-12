@@ -18,8 +18,8 @@ export default function SingIn(){
 
             setIsLoading(true)
             const redirectUrl = Liking.createURL("/")
-            const oAuthFlow = await googleAuth.startSSOFlow()
-            // resolver a criação desta função para usar a conta do google com clerk
+            // const oAuthFlow = await googleAuth.startSSOFlow(precisa de parametro)
+            // resolver a configuração deste método para usar a conta do google com clerk!
             
             if (oAuthFlow.authSessionResult?.type === 'success'){
                 if(oAuthFlow.setActive){

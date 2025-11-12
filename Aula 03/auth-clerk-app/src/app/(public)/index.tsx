@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, Linking } from "react-native";
 import {useSSO} from "@clerk/clerk-expo"
 import * as Liking from "expo-linking"
 import * as WebBrowser from "expo-web-browser"
-import {router} from "expo-router"
+// import {router} from "expo-router"
 
 WebBrowser.maybeCompleteAuthSession()
 
